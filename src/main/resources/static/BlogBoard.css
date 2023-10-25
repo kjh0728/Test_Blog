@@ -1,0 +1,53 @@
+.board
+{
+    background: bisque;
+}
+
+.header
+{
+    background: aqua;
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+.content-board
+{
+    background: dimgrey;
+    display: flex;
+}
+
+.sub-menu
+{
+    background: indianred;
+    min-height: 50rem;
+    width: 10%;
+}
+
+.sub-menu input
+{
+    margin-left: 4.5rem;
+}
+
+.content
+{
+    background: greenyellow;
+    min-height: 50rem;
+    width: 90%;
+}
+
+a
+{
+    text-decoration: none;
+    color: black;
+}
+
+ul
+{
+    list-style: none;
+    margin: 0.5rem;
+    padding: 0;
+    text-align: center;
+    font-weight: bold;
+}
+
+

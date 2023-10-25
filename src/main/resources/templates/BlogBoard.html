@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/BlogBoard.css">
+</head>
+<body>
+    <div class="board">
+        <div class="header">
+            Logo
+        </div>
+
+        <div class="content-board">
+            <div class="sub-menu">
+                <ul th:each="post, loop:${postList}">
+                    <li>
+                        <a th:href="@{|/detail/${post.id}|}" th:text="${post.title}"></a>
+                    </li>
+                </ul>
+                <div>
+                    <form action="/create" method="post">
+                        <input type="submit" value="추가">
+                    </form>
+                </div>
+            </div>
+            <div class="content">
+                <form action="/modify" method="post">
+                    <div>
+                        <input type="hidden" name="id" th:value="${selectPost.id}">
+                    </div>
+                    <div>
+                        <input type="text" name="title" id="title" th:value="${selectPost.title}">
+                    </div>
+                    <div>
+                        <textarea name="content" id="content" rows="15" th:text="${selectPost.content}"></textarea>
+                    </div>
+                    <div>
+                        <input type="submit" value="수정">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
